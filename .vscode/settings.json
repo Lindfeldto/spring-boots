@@ -1,6 +1,12 @@
 {
     "cSpell.words": [
         "Autowired",
+        "Fuga",
+        "Hoge",
+        "XDELETE",
+        "XGET",
+        "XPOST",
+        "XPUT",
         "jdbc"
     ],
     "java.configuration.updateBuildConfiguration": "interactive"

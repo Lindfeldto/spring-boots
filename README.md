@@ -25,6 +25,12 @@ Try out Spring Boot in VSCode
   - using JpaRepository
 
 
+## Web demos
+
+* demo-web-rest
+  - rest api
+
+
 ## VSCode Trouble Shooting
 
 * The import of xxx cannot be resolved
