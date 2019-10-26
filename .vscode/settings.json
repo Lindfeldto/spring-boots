@@ -9,5 +9,7 @@
         "XPUT",
         "jdbc"
     ],
-    "java.configuration.updateBuildConfiguration": "interactive"
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "maven.view": "flat",
+    "files.insertFinalNewline": true
 }

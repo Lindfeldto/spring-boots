@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    layout:decorate="~{customers/layout}">
+
+<head>
+    <title>Customers Edit</title>
+</head>
+
+<body>
+
+    <div layout:fragment="contents">
+        <div th:replace="customers/form.html :: formField(endpoint='/customers/__*{id}__', method='put', legend='編集', button='更新')">
+        </div>
+    </div>
+
+</body>
+
+</html>

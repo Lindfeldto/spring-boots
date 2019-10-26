@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+    layout:decorate="~{customers/layout}">
+
+<head>
+    <title>Customers List</title>
+</head>
+
+<body>
+
+    <div layout:fragment="contents">
+        <div
+            th:replace="customers/form.html :: formField(endpoint='/customers', method='post', legend='作成', button='作成')">
+        </div>
+
+        <hr />
+
+        <table class="table table-striped table-bordered table-sm">
+            <tr>
+                <th>ID</th>
+                <th>姓</th>
+                <th>名</th>
+                <th colspan="2">編集</th>
+            </tr>
+            <tr th:each="customer : ${customers}" th:object="${customer}" th:inline="text">
+                <td>[[*{id}]]</td>
+                <td>[[*{lastName}]]</td>
+                <td>[[*{firstName}]]</td>
+                <td>
+                    <a th:href="@{/customers/__*{id}__/edit}" class="btn btn-outline-dark btn-sm">編集</a>
+                </td>
+                <td>
+                    <form th:action="@{/customers/__*{id}__}" th:method="delete">
+                        <input type="submit" value="削除" class="btn btn-danger btn-sm" />
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+
+</html>
