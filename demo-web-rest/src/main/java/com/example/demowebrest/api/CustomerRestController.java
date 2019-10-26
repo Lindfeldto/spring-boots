@@ -10,6 +10,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -48,14 +49,14 @@ public class CustomerRestController {
     // Customer postCustomer(@RequestBody Customer customer) {
     // return customerService.create(customer);
     // }
-    ResponseEntity<Customer> postCustomer(@RequestBody Customer customer, UriComponentsBuilder uriBuilder) {
+    ResponseEntity<Customer> postCustomer(@Validated @RequestBody Customer customer, UriComponentsBuilder uriBuilder) {
         Customer created = customerService.create(customer);
         URI location = uriBuilder.path("api/customers/{id}").buildAndExpand(created.getId()).toUri();
         return ResponseEntity.created(location).body(created);
     }
 
     @PutMapping(path = "{id}")
-    Customer putCustomer(@PathVariable Integer id, @RequestBody Customer customer) {
+    Customer putCustomer(@PathVariable Integer id, @Validated @RequestBody Customer customer) {
         customer.setId(id);
         return customerService.update(customer);
     }
