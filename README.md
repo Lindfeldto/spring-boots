@@ -64,17 +64,19 @@ vscjava.vscode-spring-initializr
 ## Web demos
 
 * demo-web-rest
-  - rest api
+  - rest api + unit test (Service) and integration test (TestRestTemplate)
 * demo-web-thymeleaf
   - thymeleaf web pages
 
 
 ## VSCode Trouble Shooting
 
-* The import of xxx cannot be resolved
-  - Command + Shift + p -> "java clean" -> click to run
-* Clean cache
-  - rm all files in `$HOME/Library/Application\ Support/Code/User/workspaceStorage/`
+* "The import of xxx cannot be resolved" or "build failed, do you want to continue?"
+  - Clean cache from Command Palette
+    - Command + Shift + p -> "java clean"
+    - Select "java: Clean the Java language server workspace"
+  - or Clean cache manually
+    - rm all files in `$HOME/Library/Application\ Support/Code/User/workspaceStorage/`
 * "Class path is incomplete" warning
   - okay to just close the window
 * org.h2.jdbc.JdbcSQLException: Column not found
@@ -91,3 +93,5 @@ vscjava.vscode-spring-initializr
   - https://github.com/making/hajiboot-samples
 * @RequestMapping handler Method Arguments
   - https://docs.spring.io/spring/docs/current/spring-framework-reference/web.html#mvc-ann-methods
+* How can I fix build failed, do you want to continue? in vscode
+  - https://stackoverflow.com/questions/50454523
