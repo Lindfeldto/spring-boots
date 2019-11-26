@@ -1,7 +1,7 @@
 # Thymeleaf starter
 
 * Minimal Thymeleaf CRUD example using Layout and Parametrized Fragment
-* Including updates for Spring Boot 2.2.0, Thymeleaf 3 and Bootstrap 4
+* Including updates for Spring Boot 2.2.0, Thymeleaf 3 and Bootstrap 4, Junit 5
 * Endpoints are following Rails REST convention
 
 
@@ -9,6 +9,7 @@
 
 ```bash
 cd demo-web-thymeleaf/
+./mvnw test
 ./mvnw spring-boot:run
 ```
 
@@ -24,6 +25,33 @@ GET /customers/id/edit
 POST /customers
 POST /customers/id, params [_method=delete]
 POST /customers/id, params [_method=put]
+```
+
+
+## Sample Tests
+
+| Type | Test Name                | Description                                         | Using            |
+| --   | -------------            | -----------                                         | -----------      |
+| Intr | SmokeTest.java           | start app context, just a sanity check.             |                  |
+| Intr | HttpRequestTest.java     | start app context, and the server with random port. | TestRestTemplate |
+| Intr | ApplicationTest.java     | start app context, but without the server.          | MockMvc          |
+| Unit | WebLayerTest.java        | start only web layer, and no server.                | MockMvc          |
+| Unit | CustomerServiceTest.java | start only service layer (no server).               | MockBean         |
+
+* These tests are based on followings
+  - https://spring.io/guides/gs/testing-web/
+  - https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-testing
+* `@SpringBootTest` will start app context, but by default it will not start a server.
+* With Junit 5
+  - we do not need @RunWith(SpringRunner.class) anymore.
+    - https://howtodoinjava.com/spring-boot2/testing/junit5-with-spring-boot2/
+  - `@Before` should be replaced by `@BeforeEach` or `@BeforeAll`
+
+
+## Show Dependency
+
+```bash
+mvn dependency:tree -DoutputFile=dependency.txt
 ```
 
 
