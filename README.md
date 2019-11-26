@@ -1,26 +1,29 @@
 # Spring Boots
 
-* Try out Spring Boot in VSCode
+* Try out Java Spring Boot in VSCode
 * Minimal examples for starter code
 
 
 ## Setup VSCode Extensions
 
 * when open some java file, VSCode will suggest Java extensions
-  - Java Extension Pack by Microsoft is good to install
-  - I did not install Spring Boot Extension Pack by Pivotal
-    - (some extension in the pack conflicted to Maven Projects extension)
+  - `Java Extension Pack by Microsoft` is good to install
+  - I did not install `Spring Boot Extension Pack by Pivotal`
+    - (since some extension in the pack conflicted to `Maven Projects` extension)
 * the below is the list of extensions I use for Java and SQL
 * install command: `code --install-extension <extension-id>`
 
 ```bash
-$ code --list-extensions 
+$ code --list-extensions
 GabrielBB.vscode-lombok
 juhahinkula.thymeleaf
+ms-azuretools.vscode-docker
+ms-mssql.mssql
 mtxr.sqltools
 Pivotal.vscode-spring-boot
 redhat.java
 redhat.vscode-xml
+streetsidesoftware.code-spell-checker
 VisualStudioExptTeam.vscodeintellicode
 vscjava.vscode-java-debug
 vscjava.vscode-java-dependency
@@ -31,12 +34,12 @@ vscjava.vscode-spring-boot-dashboard
 vscjava.vscode-spring-initializr
 ```
 
-* to quick create spring boot project
-  - open Command Palette by Ctrl(or ⌘)+Shift+P
+* to create spring boot project quickly
+  - open `Command Palette` by Ctrl(or ⌘)+Shift+P
   - type `spring initializr`
-* to run the spring boot project
-  - open Spring-Boot Dashboard and right click and `Run` or...
-  - open Maven Projects and find and click `spring-boot:run`
+* to run the spring boot project, go to the left bottom then
+  - open `Spring-Boot Dashboard` and right click and `Run` or...
+  - open `Maven Projects`, find `spring-boot:run` and click it
 
 
 ## CLI demos
@@ -65,8 +68,8 @@ vscjava.vscode-spring-initializr
 
 * demo-web-rest
   - rest api + unit test (Service) and integration test (TestRestTemplate)
-* demo-web-thymeleaf
-  - thymeleaf web pages
+* spring-data-jpa-thymeleaf
+  - thymeleaf web pages + flyway + unit test
 
 
 ## VSCode Trouble Shooting

@@ -8,7 +8,7 @@
 ## Run Server
 
 ```bash
-cd demo-web-thymeleaf/
+cd spring-data-jpa-thymeleaf/
 ./mvnw test
 ./mvnw spring-boot:run
 ```

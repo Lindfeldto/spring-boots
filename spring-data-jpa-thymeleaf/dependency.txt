@@ -1,4 +1,4 @@
-com.example:demo-web-thymeleaf:jar:0.0.1-SNAPSHOT
+com.example:spring-data-jpa-thymeleaf:jar:0.0.1-SNAPSHOT
 +- org.springframework.boot:spring-boot-starter-data-jpa:jar:2.2.0.RELEASE:compile
 |  +- org.springframework.boot:spring-boot-starter-aop:jar:2.2.0.RELEASE:compile
 |  |  +- org.springframework:spring-aop:jar:5.2.0.RELEASE:compile

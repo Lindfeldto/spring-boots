@@ -8,7 +8,7 @@
     <relativePath/>
   </parent>
   <groupId>com.example</groupId>
-  <artifactId>demo-web-thymeleaf</artifactId>
+  <artifactId>spring-data-jpa-thymeleaf</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>demo</name>
   <description>Demo project for Spring Boot</description>
