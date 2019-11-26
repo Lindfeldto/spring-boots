@@ -1,15 +1,20 @@
 {
     "cSpell.words": [
         "Autowired",
+        "Configurer",
         "Fuga",
         "Hoge",
+        "Servlet",
         "XDELETE",
         "XGET",
         "XPOST",
         "XPUT",
-        "jdbc"
+        "jdbc",
+        "springsecurity",
+        "thymeleaf"
     ],
     "java.configuration.updateBuildConfiguration": "interactive",
     "maven.view": "flat",
+    "editor.formatOnSave": true,
     "files.insertFinalNewline": true
 }
