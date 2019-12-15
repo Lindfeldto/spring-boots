@@ -42,6 +42,15 @@ vscjava.vscode-spring-initializr
   - open `Maven Projects`, find `spring-boot:run` and click it
 
 
+## Spring Data JDBC sample apps
+
+* `Spring Data JDBC` is very simple and straightforward db access library.
+* It is something middle between Spring Data JPA and JDBC Template.
+* Since this is relatively new stuff, I made two samples apps.
+  - [spring-data-jdbc-rest](./spring-data-jdbc-rest/README.md)
+  - [spring-data-jdbc-web-security](./spring-data-jdbc-web-security/README.md)
+
+
 ## CLI demos
 
 * demo-cli (before)
