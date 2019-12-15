@@ -1,0 +1,13 @@
+CREATE TABLE IF NOT EXISTS users (
+  id IDENTITY,
+  username VARCHAR NOT NULL,
+  password VARCHAR NOT NULL,
+  enabled BOOLEAN DEFAULT TRUE,
+  created_at TIMESTAMP DEFAULT NOW()
+);
+CREATE TABLE IF NOT EXISTS authorities (
+  id IDENTITY,
+  username VARCHAR NOT NULL,
+  authority VARCHAR NOT NULL,
+  created_at TIMESTAMP DEFAULT NOW()
+);

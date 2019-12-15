@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+    xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+    <title>Hello World!</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+
+<body>
+    <h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
+    
+    User: [[${#authentication.name}]] (thymeleaf-extras-springsecurity5 dependency required)
+
+    <div>
+        Logged user: <span sec:authentication="name"></span><br>
+        Roles: <span sec:authentication="principal.authorities"></span>
+    </div>
+
+    <hr>
+    
+    <div sec:authorize="isAuthenticated()">
+        This content is only shown to authenticated users.
+    </div>
+    <div sec:authorize="hasRole('ROLE_ADMIN')">
+        This content is only shown to administrators.
+    </div>
+    <div sec:authorize="hasRole('ROLE_USER')">
+        This content is only shown to users.
+    </div>
+
+    <hr>
+
+    reference: <a href="https://www.thymeleaf.org/doc/articles/springsecurity.html" target="_blank">
+        https://www.thymeleaf.org/doc/articles/springsecurity.html
+    </a>
+
+    <form th:action="@{/logout}" method="post">
+        <input type="submit" value="Sign Out"/>
+    </form>
+
+    <div>
+        <a href="/">HOME</a>
+    </div>
+</body>
+
+</html>
